@@ -1,0 +1,47 @@
+Create Ubuntu 16.04 machine
+Install Jenkins
+    1  cd /opt
+    2  sudo apt update -y
+    3  sudo apt-get update -y
+    4  sudo apt-get install openjdk-8-jdk
+    5  wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+    6  echo "deb http://pkg.jenkins-ci.org/debian binary/" | sudo tee -a /etc/apt/sources.list.d/jenkins.list
+    7  sudo apt-get update
+    8  sudo apt-get install jenkins
+    9  service jenkins status
+Launch Jenkins (web portal)
+Install Suggested Plugins
+Install Java and Maven
+32 java -version
+33 mvn -v
+34 apt install maven
+35 mvn -v
+36 which maven
+37 which mvn
+38 mvn -v
+39 sudo apt-get remove maven3
+40 sudo apt-get remove maven
+41 sudo add-apt-repository "deb http://ppa.launchpad.net/natecarlson/maven3/ubuntu precise main"
+42 sudo apt-get update
+43 sudo apt-get install maven3
+44 sudo ln -s /usr/share/maven3/bin/mvn /usr/bin/mvn
+45 mvn -v
+46 echo MAVEN_HOME
+47 echo $MAVEN_HOME
+48 echo $JAVA_HOME
+49 which java
+50 which mvn
+51 java -version
+52 mvn -version
+53 echo $$
+54 echo $MAVEN_HOME
+55 export MAVEN_HOME
+56 export MAVEN_HOME=/usr/share/maven3
+57 echo $MAVEN_HOME
+
+----------------------Java Configuration
+sudo apt-get install openjdk-8-jdk
+/usr/lib/jvm/java-8-openjdk-amd64
+
+77 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+78 echo $JAVA_HOME
